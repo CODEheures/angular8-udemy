@@ -11,7 +11,6 @@ import { POKEMONS } from '../mocks/pokemons';
 export class AppComponent implements OnInit {
   private title = 'Pokémons';
   private pokemons: Pokemon[];
-  private age = 17;
 
   ngOnInit(): void {
     this.pokemons = POKEMONS;
@@ -21,7 +20,4 @@ export class AppComponent implements OnInit {
     alert('Ce pokemon se nomme ' + pokemon.name);
   }
 
-  setAge(value: string) {
-    this.age = parseFloat(value);
-  }
 }

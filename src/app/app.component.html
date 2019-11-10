@@ -1,6 +1,6 @@
 <h1>{{ title }}</h1>
 
-<label>Entrez votre age</label>
-<input #ageBox (keyup)="setAge(ageBox.value)">
-<p *ngIf="age >= 18">Vous est majeur</p>
-<p *ngIf="age < 18">Vous est mineur</p>
+<ul>
+  <li *ngFor="let pokemon of pokemons" (click)="selectPokemon(pokemon)" style="cursor: pointer">{{pokemon.name}}</li>
+</ul>
+
