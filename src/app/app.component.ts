@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
     alert('Ce pokemon se nomme ' + pokemon.name);
   }
 
-  onKeyUp(event: KeyboardEvent) {
-    this.inputValue = 'Bonjour ' + (event.target as HTMLInputElement).value;
+  onKeyUp(value: string) {
+    this.inputValue = 'Bonjour ' + value;
   }
 
   onClick() {

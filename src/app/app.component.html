@@ -6,6 +6,7 @@
   <li>Carapuce</li>
 </ul>
 
-<input (keyup)="onKeyUp($event)" type="text">
+<input #box (keyup)="onKeyUp(box.value)" type="text">
+<p>{{ box.value }}</p>
 <p>{{ inputValue }}</p>
 <button (click)="onClick()">Cliquez ici!</button>
