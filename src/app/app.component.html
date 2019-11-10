@@ -1,17 +1,6 @@
 <h1>{{ title }}</h1>
 
-<ul>
-  <li>Bulbizarre</li>
-  <li>Salamèche</li>
-  <li>Carapuce</li>
-</ul>
-
-<input #box (keyup)="onKeyUp(box.value)" type="text">
-<p>{{ box.value }}</p>
-<p>{{ inputValue }}</p>
-
-<label>Entrez une valeur puis valider avec la touche entrée</label>
-<input #box2 (keyup.enter)="inputValue2=box2.value" (blur)="inputValue2=box2.value">
-<p>Vous avez entré: {{inputValue2}}</p>
-
-<button (click)="onClick()">Cliquez ici!</button>
+<label>Entrez votre age</label>
+<input #ageBox (keyup)="setAge(ageBox.value)">
+<p *ngIf="age >= 18">Vous est majeur</p>
+<p *ngIf="age < 18">Vous est mineur</p>
