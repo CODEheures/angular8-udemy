@@ -9,6 +9,7 @@ import { PokemonDetailComponent } from './pokemons-details/pokemon-details.compo
 
 import { BorderCardDirective } from '../directives/border-card.directive';
 import { PokemonTypeColorPipe } from '../pipes/pokemon-type.pipe';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokemonTypeColorPipe } from '../pipes/pokemon-type.pipe';
     PokemonListComponent,
     PokemonDetailComponent,
     BorderCardDirective,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
