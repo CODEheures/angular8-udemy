@@ -12,7 +12,6 @@ import { Pokemon } from '../../models/pokemon';
 })
 export class PokemonDetailComponent implements OnInit {
 
-  pokemons: Pokemon[] = null;
   pokemon: Pokemon = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private pokemonsService: PokemonsService) {}
