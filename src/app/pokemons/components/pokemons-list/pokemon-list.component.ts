@@ -13,7 +13,7 @@ export class PokemonListComponent implements OnInit {
   private title = 'Pokémons';
   private pokemons: Pokemon[];
 
-  constructor(private router: Router){}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.pokemons = POKEMONS;
