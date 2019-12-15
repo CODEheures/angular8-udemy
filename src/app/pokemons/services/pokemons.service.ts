@@ -15,4 +15,18 @@ export class PokemonsService {
     })[0];
   }
 
+  getPokemonTypes(): string[] {
+    return [
+      'Feu',
+      'Plante',
+      'Poison',
+      'Eau',
+      'Insecte',
+      'Normal',
+      'Vol',
+      'Electrik',
+      'Fée'
+    ];
+  }
+
 }
