@@ -52,6 +52,19 @@ export class PokemonsService {
     );
   }
 
+  deletePokemon(pokemon: Pokemon): Observable<null> {
+    const httpOptions = {
+      headers: new HttpHeaders({'content-type': 'application/json'})
+    };
+
+    const url = `${this.pokemonsUrl}/${pokemon.id}`;
+
+    return this.http.delete(url, httpOptions).pipe(
+      tap(_ => PokemonsService.log(`Delete pokemon ${pokemon.id}`)),
+      catchError(this.handleError<any>(`Delete pokemon ${pokemon.id}`, pokemon))
+    );
+  }
+
 
   getPokemonTypes(): string[] {
     return [

@@ -28,4 +28,9 @@ export class PokemonDetailComponent implements OnInit {
   edit(): void {
     this.router.navigate(['/pokemon/edit', this.pokemon.id]);
   }
+
+  delete(): void {
+    this.pokemonsService.deletePokemon(this.pokemon)
+      .subscribe(_ => this.goBack());
+  }
 }
