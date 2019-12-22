@@ -1,8 +1,10 @@
 <form *ngIf="pokemon" (ngSubmit)="onSubmit()" #pokemonForm="ngForm">
   <div class="row">
     <div class="col s8 offset-s2">
+      <div class="card-image center">
+        <img [src]="pokemon.picture">
+      </div>
       <div class="card-panel">
-
         <!-- Pokemon name -->
         <div class="form-group">
           <label for="name">Nom</label>
