@@ -13,6 +13,7 @@ import { BorderCardDirective } from './directives/border-card.directive';
 import { PokemonTypeColorPipe } from './pipes/pokemon-type.pipe';
 import {PokemonsService} from './services/pokemons.service';
 import {PokemonsSearchComponent} from './components/pokemons-search/pokemons-search.component';
+import {LoaderComponent} from '../loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {PokemonsSearchComponent} from './components/pokemons-search/pokemons-sea
     PokemonTypeColorPipe,
     PokemonsEditComponent,
     PokemonFormComponent,
-    PokemonsSearchComponent
+    PokemonsSearchComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
