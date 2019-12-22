@@ -28,7 +28,7 @@ export class PokemonsService {
   getPokemons(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(this.pokemonsUrl).pipe(
       tap(_ => PokemonsService.log('fetched pokemons')),
-      catchError(this.handleError('getPokemons', []))
+      catchError(this.handleError<Pokemon[]>('getPokemons', []))
     );
   }
 
@@ -62,6 +62,18 @@ export class PokemonsService {
     return this.http.delete(url, httpOptions).pipe(
       tap(_ => PokemonsService.log(`Delete pokemon ${pokemon.id}`)),
       catchError(this.handleError<any>(`Delete pokemon ${pokemon.id}`, pokemon))
+    );
+  }
+
+  searchPokemons(term: string): Observable<Pokemon[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+
+    const url = `${this.pokemonsUrl}/?name=${term}`;
+    return this.http.get<Pokemon[]>(url).pipe(
+      tap(_ => PokemonsService.log(`search ${term}`)),
+      catchError(this.handleError<Pokemon[]>(`search ${term}`, []))
     );
   }
 
