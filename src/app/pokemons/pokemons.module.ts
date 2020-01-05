@@ -14,6 +14,7 @@ import { PokemonTypeColorPipe } from './pipes/pokemon-type.pipe';
 import {PokemonsService} from './services/pokemons.service';
 import {PokemonsSearchComponent} from './components/pokemons-search/pokemons-search.component';
 import {LoaderComponent} from '../loader/loader.component';
+import {AuthGuardService} from '../auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,6 @@ import {LoaderComponent} from '../loader/loader.component';
     FormsModule,
     PokemonsRoutingModule
   ],
-  providers: [PokemonsService]
+  providers: [PokemonsService, AuthGuardService]
 })
 export class PokemonsModule { }
